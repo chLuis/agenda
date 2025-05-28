@@ -9,7 +9,7 @@ import {
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
 import { useState } from "react";
-import { Copy, Delete, Edit } from "lucide-react";
+import { Copy, Edit } from "lucide-react";
 import { TbDotsVertical } from "react-icons/tb";
 import { ContactType, ProvinceType } from "@/types";
 import ContactDelete from "./contact-delete";
@@ -44,9 +44,9 @@ export default function ContactCard({
               <span className="text-xs opacity-70">{contact.telefono}</span>
             </DropdownMenuLabel>
             <DropdownMenuSeparator />
-            <DropdownMenuItem className="flex flex-nowrap items-center gap-2 hover:bg-neutral-200 duration-200">
+            <DropdownMenuItem className=" hover:bg-neutral-200 duration-200">
+              <a href={`tel:${contact.telefono}`} className="flex items-center gap-2 w-full">
               <IoCallOutline />
-              <a href={`tel:${contact.telefono}`}>
                 Llamar
               </a>
             </DropdownMenuItem>
@@ -64,7 +64,6 @@ export default function ContactCard({
               Editar contacto
             </DropdownMenuItem>
             <DropdownMenuItem className="hover:bg-neutral-200 duration-200">
-              <Delete />
               <ContactDelete id_persona={contact.id_persona} />
             </DropdownMenuItem>
           </DropdownMenuContent>
