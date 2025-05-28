@@ -3,7 +3,7 @@ import { client } from "@/lib/db";
 
 export async function GET() {
   try {
-    const result = await client.executeMultiple(`
+    await client.executeMultiple(`
     INSERT INTO provincias (nombre_provincia) VALUES
       ('Buenos Aires'),
       ('Catamarca'),
