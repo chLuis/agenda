@@ -6,7 +6,7 @@ export async function GET() {
     await client.executeMultiple(`
       CREATE TABLE IF NOT EXISTS provincias(
       id_provincia INTEGER PRIMARY KEY AUTOINCREMENT,
-      nombre_provincia VARCHAR(32)
+      nombre_provincia VARCHAR(32) UNIQUE NOT NULL
     );
     
     CREATE TABLE IF NOT EXISTS personas(
