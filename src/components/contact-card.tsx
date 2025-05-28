@@ -52,13 +52,11 @@ export default function ContactCard({
             </DropdownMenuItem>
             <DropdownMenuItem onClick={handleCopy} className="flex flex-nowrap items-center gap-2 hover:bg-neutral-200 duration-200">
               <Copy />
-              
-                Copiar
-           
+              Copiar
             </DropdownMenuItem>
             <DropdownMenuItem
               onSelect={(e) => {
-                e.preventDefault(); // <- previene que se cierre el dropdown
+                e.preventDefault();
                 setOpen(true);
               }}
             >

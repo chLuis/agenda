@@ -1,36 +1,25 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+Proyecto creado con [Next.js](https://nextjs.org), [Shadcn](https://ui.shadcn.com/) y [Turso](https://turso.tech/)
 
-## Getting Started
+## Pasos para replicar el proyecto
 
-First, run the development server:
+1 - Clonar el repositorio
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+2 - Ejecutar ```npm i``` en la consola de comandos
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+3 - Crear una base de datos en [Turso](https://turso.tech/)
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+4 - Renombrar el archivo .template.env a .env y completar con las variables propias
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+5 - Ejecutar el proyecto en modo de desarrollador ```npm run dev```
 
-## Learn More
+6 - Abrir en el navegador [http://localhost:3000](http://localhost:3000)
 
-To learn more about Next.js, take a look at the following resources:
+7 - Para crear las tablas es necesario ir a la ruta ```/api/database/create```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+8 - Desde aquí ya se puede utilizar la agenda
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+9 - Para crear unos campos de ejemmplos es necesario ir a la ruta ```/api/database/populate```
 
-## Deploy on Vercel
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+### Sobre el proyecto
+Para la confección de la agenda decidí crear 2 tablas, en una guardo datos de los contactos y en la otra guardo las provincias para poder realizar consultas y filtrados más específicos. Además se creé una vista la cual es la que muestra todos los contactos, para simplificar las consultas.
